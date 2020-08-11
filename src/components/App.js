@@ -11,28 +11,32 @@ import Footer from './Footer';
 // .map tiene como segundo parametro un indice. Este puede servir para la propiedad key. Dentro del div que encapsula al componente, agregamos el atributo.
 // Recordar reemplazar class por className
 
-function App() {
+var nums = [1,2,3,4,5,6];
   
-  var content =
-    <div>
-      <div className="text-center">
-        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src="/images/product_dummy.svg" alt="dummy"/>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-      <a target="_blank" rel="nofollow" href="/">View product detail</a>
-    </div>;
-
-  var content1 = 
-    <div className="row">                        
-      <Category />
-      <Category />
-      <Category />
-      <Category />
-      <Category />
-      <Category />
+var content =
+  <div>
+    <div className="text-center">
+      <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src="/images/product_dummy.svg" alt="dummy"/>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
+    <a target="_blank" rel="nofollow" href="/">View product detail</a>
   </div>;
 
+var content1 = 
+  <div className="row">
+    {nums.map(function(num, idx){
+      return (
+        <div className="col-lg-6 mb-4" key={idx}>         
+          <Category />
+        </div>
+      )
+    })}
+</div>;
+
+function App() {
+
   return (
+
     <div id="wrapper">      
       <Sidebar />
       <div id="content-wrapper" className="d-flex flex-column">
@@ -54,14 +58,11 @@ function App() {
               <Box content={content}/>
               <Box content={content1}/>
             </div>
-
           </div>
 
         </div>
         <Footer />
-
-      </div>
-      
+      </div>      
     </div>
 
   );
