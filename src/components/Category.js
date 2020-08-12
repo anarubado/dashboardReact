@@ -1,8 +1,7 @@
 import React from 'react';
 
 function Category(){
-    return(
-        
+    return(        
         <div className="card bg-info text-white shadow">
             <div className="card-body">
                 Category 01

@@ -5,6 +5,8 @@ import Navbar from './Navbar';
 import Card from './Card'
 import Box from './Box';
 import Category from './Category';
+import Table from './Table';
+import Row from './Row';
 import Footer from './Footer';
 
 // Recordar pasarle la propiedad key a cada componente que se repita cuando estos se iteran.
@@ -58,8 +60,14 @@ function App() {
               <Box content={content}/>
               <Box content={content1}/>
             </div>
-          </div>
 
+            <div className="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
+            </div>
+
+            <Table row={<Row />}/>
+
+          </div>
         </div>
         <Footer />
       </div>      
