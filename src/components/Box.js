@@ -8,7 +8,7 @@ function Box(props){
                     <h6 className="m-0 font-weight-bold text-primary">Last product in Data Dase</h6>
                 </div>
                 <div className="card-body">
-                    {props.content}
+                    {props.children}
                 </div>
             </div>
         </div>
