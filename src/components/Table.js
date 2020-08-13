@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Row from './Row';
+
 function Table(props){
     return(
         <div className="card shadow mb-4">
@@ -17,7 +19,8 @@ function Table(props){
                         </tr>
                     </thead>
                     <tbody>
-                        {props.row}
+                        <Row />
+                        <Row />
                     </tbody>
                 </table>
             </div>

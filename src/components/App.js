@@ -6,7 +6,6 @@ import Card from './Card'
 import Box from './Box';
 import Category from './Category';
 import Table from './Table';
-import Row from './Row';
 import Footer from './Footer';
 
 //import PropTypes from 'prop-types';
@@ -44,6 +43,7 @@ function App() {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
                 <a target="_blank" rel="nofollow" href="/">View product detail</a>
               </Box>
+
               <Box>
                 <div className="row">
                   {nums.map(function(num, idx){
@@ -55,13 +55,14 @@ function App() {
                   })}
                 </div>
               </Box>
+
             </div>
 
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
               <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
             </div>
 
-            <Table row={<Row />}/>
+            <Table />
 
           </div>
         </div>
